@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tracking_bar"
+        layout="@layout/view_top_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/tracking_map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tracking_scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tracking_bar" />
+
+    <TextView
+        style="@style/Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:paddingHorizontal="6dp"
+        android:text="@string/map_attribution"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/tracking_map"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/tracking_scroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="380dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tracking_status"
+                style="@style/Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tracking_eta"
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.foodrush.app.view.StatusStepperView
+                android:id="@+id/tracking_stepper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tracking_pin"
+                style="@style/Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_chip"
+                android:gravity="center"
+                android:padding="10dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/tracking_rider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_amber"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_rider"
+                    app:tint="@color/on_amber" />
+
+                <TextView
+                    android:id="@+id/tracking_rider_name"
+                    style="@style/Text.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/tracking_chat"
+                    style="@style/Widget.FoodRush.IconButton"
+                    android:contentDescription="@string/chat_with_rider"
+                    android:src="@drawable/ic_chat"
+                    app:tint="@color/amber_dark" />
+
+                <ImageButton
+                    android:id="@+id/tracking_call_rider"
+                    style="@style/Widget.FoodRush.IconButton"
+                    android:contentDescription="@string/call_rider_phone"
+                    android:src="@drawable/ic_call"
+                    app:tint="@color/amber_dark" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tracking_demo_note"
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="@string/demo_note"
+                android:textSize="11sp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tracking_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/rate_delivery"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tracking_call"
+                    style="@style/Widget.FoodRush.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/call_restaurant"
+                    android:textSize="12sp"
+                    app:icon="@drawable/ic_call"
+                    app:iconTint="@color/amber_dark" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tracking_share"
+                    style="@style/Widget.FoodRush.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/share_order"
+                    android:textSize="12sp"
+                    app:icon="@drawable/ic_contacts"
+                    app:iconTint="@color/amber_dark" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tracking_cancel"
+                style="@style/Widget.FoodRush.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_order"
+                android:textColor="@color/error"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

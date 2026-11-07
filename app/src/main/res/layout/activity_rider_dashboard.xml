@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/dash_bar"
+        layout="@layout/view_top_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingBottom="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.FoodRush.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Text.Title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/goal_title" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dash_goal_set"
+                            style="@style/Widget.FoodRush.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/goal_set"
+                            android:textColor="@color/amber_dark" />
+                    </LinearLayout>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/dash_goal_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        app:indicatorColor="@color/amber_dark"
+                        app:trackColor="@color/divider"
+                        app:trackCornerRadius="4dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/dash_goal_text"
+                        style="@style/Text.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/Text.Section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/dash_earnings" />
+
+            <GridLayout
+                android:id="@+id/dash_earnings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2" />
+
+            <TextView
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/dash_last_7_days" />
+
+            <com.foodrush.app.view.BarChartView
+                android:id="@+id/dash_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.FoodRush.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="16dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cash_in_hand" />
+
+                        <TextView
+                            android:id="@+id/dash_cash_amount"
+                            style="@style/Text.Section"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/dash_cash_note"
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/dash_cash_deposit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mark_deposited"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/Text.Section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/your_rating" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:minWidth="96dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dash_rating"
+                        style="@style/Text.Display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.foodrush.app.view.RatingBarView
+                        android:id="@+id/dash_rating_stars"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/dash_rating_count"
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dash_rating_rows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Text.Section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/dash_stats" />
+
+            <GridLayout
+                android:id="@+id/dash_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2" />
+
+            <TextView
+                style="@style/Text.Section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/dash_deliveries" />
+
+            <TextView
+                android:id="@+id/dash_deliveries_empty"
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="@string/rider_empty_history"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/dash_deliveries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

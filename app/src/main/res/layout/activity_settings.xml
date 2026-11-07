@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/settings_bar"
+            layout="@layout/view_top_bar" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/setting_dark"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:paddingHorizontal="20dp"
+            android:text="@string/setting_dark" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/setting_promos"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:paddingHorizontal="20dp"
+            android:text="@string/setting_promos" />
+
+        <TextView
+            android:id="@+id/setting_system"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:text="@string/setting_notifications" />
+
+        <TextView
+            android:id="@+id/setting_terms"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:text="@string/terms" />
+
+        <TextView
+            android:id="@+id/setting_privacy"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:text="@string/privacy" />
+
+        <TextView
+            android:id="@+id/setting_credits"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:text="@string/photo_credits" />
+
+        <TextView
+            android:id="@+id/setting_cloud"
+            style="@style/Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/setting_version"
+            style="@style/Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+</ScrollView>

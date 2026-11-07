@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dish photos are looked up by name from the menu data, so resource shrinking must keep them. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/dish_*" />

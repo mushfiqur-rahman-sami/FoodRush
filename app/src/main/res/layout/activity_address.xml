@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/address_bar"
+        layout="@layout/view_top_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address_search_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="@string/address_search_hint"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_bar"
+        app:startIconDrawable="@drawable/ic_search">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:inputType="textPostalAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/address_map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/address_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_search_layout" />
+
+    <ListView
+        android:id="@+id/address_results"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/surface"
+        android:elevation="6dp"
+        android:visibility="gone"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="@id/address_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/address_map"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        style="@style/Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:paddingHorizontal="6dp"
+        android:text="@string/map_attribution"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/address_map"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/address_panel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            style="@style/Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_hint" />
+
+        <TextView
+            android:id="@+id/address_selected"
+            style="@style/Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/address_details">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/address_locate"
+            style="@style/Widget.FoodRush.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_my_location"
+            app:icon="@drawable/ic_my_location"
+            app:iconTint="@color/amber_dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/address_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_address" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

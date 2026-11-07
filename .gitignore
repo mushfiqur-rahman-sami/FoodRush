@@ -1,0 +1,15 @@
+*.iml
+.gradle/
+/local.properties
+.idea/
+.kotlin/
+.DS_Store
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+*.keystore
+*.jks
+# Firebase config holds this project's API key; add your own (see README).
+/app/google-services.json

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="20dp"
+        android:paddingVertical="8dp">
+
+        <ImageButton
+            android:id="@+id/search_back"
+            style="@style/Widget.FoodRush.IconButton"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_back" />
+
+        <EditText
+            android:id="@+id/search_input"
+            style="@style/Text.Body"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@drawable/bg_chip"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingHorizontal="20dp"
+            android:textColorHint="@color/text_secondary" />
+    </LinearLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/search_filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_rating"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_rating" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_price"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_price" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_under"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_under" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <LinearLayout
+        android:id="@+id/search_recent_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            style="@style/Text.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/search_recent" />
+
+        <TextView
+            android:id="@+id/search_clear"
+            style="@style/Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:text="@string/search_clear"
+            android:textColor="@color/amber_dark" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp" />
+
+    <include
+        android:id="@+id/search_state"
+        layout="@layout/view_state" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_results"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="8dp" />
+</LinearLayout>

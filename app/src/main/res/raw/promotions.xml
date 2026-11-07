@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Platform-wide coupons. Restaurants add their own from the app. -->
+<promotions>
+    <promo code="RUSH20" title="20% off" subtitle="On orders of 500 tk or more" percent="20" flat="0" freeDelivery="false" minOrder="500" />
+    <promo code="WELCOME10" title="10% off" subtitle="Your first FoodRush order" percent="10" flat="0" freeDelivery="false" minOrder="0" />
+    <promo code="KHULNA50" title="50 tk off" subtitle="On orders of 400 tk or more" percent="0" flat="50" freeDelivery="false" minOrder="400" />
+    <promo code="FREEDEL" title="Free delivery" subtitle="On orders of 800 tk or more" percent="0" flat="0" freeDelivery="true" minOrder="800" />
+</promotions>

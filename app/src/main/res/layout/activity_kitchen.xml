@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared by the restaurant's kitchen and the rider's home: a header, two tabs and a list of order cards. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="64dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/work_title"
+                style="@style/Text.Section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/work_subtitle"
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/work_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/work_menu"
+            style="@style/Widget.FoodRush.IconButton"
+            android:contentDescription="@string/open_menu"
+            android:src="@drawable/ic_menu" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/work_stats"
+        style="@style/Text.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_chip"
+        android:padding="12dp" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/work_map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/work_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="8dp"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/work_tab_active"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/work_tab_other"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/work_tab_done"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <include
+        android:id="@+id/work_state"
+        layout="@layout/view_state" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/work_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="14dp"
+        android:paddingBottom="16dp" />
+</LinearLayout>

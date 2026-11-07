@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Starting menu. Khulna restaurants are real places, with names and positions from OpenStreetMap
+  (and web listings for Abbas Hotel, Shawarma House and Kababz); their menus and prices are typical
+  local ones. Restaurants elsewhere are invented names in real neighbourhoods. With Firebase on,
+  this is uploaded once and restaurant accounts then edit their own menus in the app.
+
+  <dish> defines a dish once. sizes are percentages of the restaurant's price, add-ons are taka.
+  <item ref="..." price="..." discount="..."> puts it on a restaurant's menu.
+-->
+<catalog>
+    <dishes>
+        <dish key="kacchi" name="Mutton Kacchi Biryani" category="Biryani" image="dish_kacchi" spicy="1" prep="15"
+            sizes="Half:60,Full:100" addons="Extra mutton piece:120,Egg:20,Borhani:60"
+            desc="Basmati rice layered with marinated mutton and potato, dum-cooked in a sealed pot." />
+        <dish key="chicken_biryani" name="Chicken Biryani" category="Biryani" image="dish_chicken_biryani" spicy="1" prep="15"
+            sizes="Half:60,Full:100" addons="Extra chicken piece:90,Egg:20"
+            desc="Spiced rice with a juicy chicken leg piece and a boiled egg." />
+        <dish key="tehari" name="Beef Tehari" category="Biryani" image="dish_tehari" spicy="2" prep="10"
+            sizes="Half:60,Full:100" addons="Extra beef:80,Egg:20"
+            desc="Mustard-oil rice cooked with small beef cubes and green chilli, Old Dhaka style." />
+        <dish key="morog_polao" name="Morog Polao" category="Biryani" image="dish_morog_polao" spicy="0" prep="15"
+            addons="Extra roast:150,Egg:20"
+            desc="Mild, fragrant polao with a chicken roast, wedding style." />
+        <dish key="khichuri" name="Bhuna Khichuri with Beef" category="Bangla" image="dish_khichuri" spicy="1" prep="15"
+            addons="Fried egg:25,Extra beef:90"
+            desc="Rice and lentils cooked thick with spices, served with beef bhuna." />
+        <dish key="chui_beef" name="Chui Jhal Beef" category="Bangla" image="dish_chui_beef" spicy="2" prep="20"
+            sizes="Half:60,Full:100" addons="Plain rice:30,Extra chui:40"
+            desc="Khulna's famous beef curry cooked with chui jhal stems for a slow, peppery heat." />
+        <dish key="chui_mutton" name="Chui Jhal Mutton" category="Bangla" image="dish_chui_mutton" spicy="2" prep="20"
+            sizes="Half:60,Full:100" addons="Plain rice:30,Extra chui:40"
+            desc="Mutton cooked low and slow with chui jhal, the signature dish of Khulna." />
+        <dish key="mezban" name="Mezbani Beef" category="Bangla" image="dish_mezban" spicy="2" prep="15"
+            addons="Plain rice:30,Dal:40"
+            desc="Chattogram's feast-style beef curry, rich with roasted spices." />
+        <dish key="kala_bhuna" name="Kala Bhuna" category="Bangla" image="dish_kala_bhuna" spicy="2" prep="15"
+            addons="Paratha:20,Plain rice:30"
+            desc="Beef fried until dark and dry, the Chattogram classic." />
+        <dish key="rezala" name="Mutton Rezala" category="Bangla" image="dish_rezala" spicy="1" prep="20"
+            addons="Naan:40,Polao:60"
+            desc="Mutton in a creamy, mildly sweet yoghurt and cashew gravy." />
+        <dish key="shorshe_ilish" name="Shorshe Ilish" category="Fish" image="dish_shorshe_ilish" spicy="2" prep="20"
+            addons="Plain rice:30"
+            desc="Hilsa steaks cooked in mustard paste and green chilli." />
+        <dish key="hilsa_fry" name="Ilish Fry" category="Fish" image="dish_hilsa_fry" spicy="1" prep="15"
+            sizes="1 piece:100,2 pieces:190" addons="Plain rice:30,Fried onion:15"
+            desc="Crisp-fried hilsa with the oil it fries in, for mixing with rice." />
+        <dish key="chingri" name="Chingri Malai Curry" category="Fish" image="dish_chingri" spicy="1" prep="20"
+            addons="Plain rice:30,Polao:60"
+            desc="Golda prawns in a coconut milk curry." />
+        <dish key="rui" name="Rui Macher Jhol" category="Fish" image="dish_rui" spicy="1" prep="15"
+            addons="Plain rice:30"
+            desc="Rohu fish in a light curry with potato and tomato." />
+        <dish key="bhorta" name="Bhorta Platter" category="Bangla" image="dish_bhorta" spicy="2" prep="10"
+            addons="Plain rice:30,Fried egg:25"
+            desc="Four mashes: potato, tomato, eggplant and dried fish, with mustard oil and chilli." />
+        <dish key="rice_dal" name="Rice, Dal and Bhaji Set" category="Bangla" image="dish_rice_dal" spicy="1" prep="10"
+            addons="Egg curry:70,Fish fry:80"
+            desc="Steamed rice with dal, seasonal vegetable bhaji and bhorta." />
+        <dish key="tikka" name="Chicken Tikka" category="Kebab &amp; Grill" image="dish_tikka" spicy="2" prep="20"
+            addons="Naan:40,Paratha:20"
+            desc="Boneless chicken marinated in yoghurt and spices, cooked on charcoal." />
+        <dish key="seekh" name="Beef Seekh Kebab" category="Kebab &amp; Grill" image="dish_seekh" spicy="2" prep="20"
+            sizes="2 pcs:100,4 pcs:190" addons="Naan:40"
+            desc="Minced beef with herbs, grilled on skewers." />
+        <dish key="shami" name="Shami Kebab (2 pcs)" category="Kebab &amp; Grill" image="dish_shami" spicy="1" prep="10"
+            addons="Paratha:20"
+            desc="Pan-fried patties of beef and lentils." />
+        <dish key="tandoori" name="Grilled Chicken" category="Kebab &amp; Grill" image="dish_tandoori" spicy="2" prep="25"
+            sizes="Quarter:100,Half:190,Full:360" addons="Naan:40,Salad:30"
+            desc="Charcoal-grilled chicken with smoky tandoori spices." />
+        <dish key="shawarma" name="Chicken Shawarma" category="Fast Food" image="dish_shawarma" spicy="1" prep="10"
+            sizes="Regular:100,Large:140" addons="Extra cheese:40"
+            desc="Grilled chicken wrapped with garlic sauce and salad." />
+        <dish key="naan" name="Butter Naan" category="Bangla" image="dish_naan" spicy="0" prep="8"
+            desc="Soft tandoor naan brushed with butter." />
+        <dish key="paratha" name="Paratha" category="Bangla" image="dish_paratha" spicy="0" prep="8"
+            addons="Egg:20"
+            desc="Flaky layered flatbread from the tawa." />
+        <dish key="fried_rice" name="Chicken Fried Rice" category="Chinese" image="dish_fried_rice" spicy="0" prep="15"
+            sizes="For 1:100,For 2:180" addons="Egg:20"
+            desc="Wok-tossed rice with chicken, egg and vegetables." />
+        <dish key="chowmein" name="Chicken Chowmein" category="Chinese" image="dish_chowmein" spicy="1" prep="15"
+            sizes="For 1:100,For 2:180" addons="Extra chicken:60"
+            desc="Stir-fried noodles with chicken and crunchy vegetables." />
+        <dish key="thai_soup" name="Thai Soup" category="Chinese" image="dish_thai_soup" spicy="2" prep="15"
+            sizes="For 2:100,For 3:140"
+            desc="Hot and sour soup with chicken, prawn and lemongrass." />
+        <dish key="chili_chicken" name="Chili Chicken" category="Chinese" image="dish_chili_chicken" spicy="2" prep="15"
+            addons="Fried rice:120"
+            desc="Crispy chicken tossed with green chilli, capsicum and onion." />
+        <dish key="fried_chicken" name="Crispy Fried Chicken" category="Fast Food" image="dish_fried_chicken" spicy="1" prep="12"
+            sizes="2 pcs:100,4 pcs:190" addons="Fries:80,Coleslaw:40"
+            desc="Golden fried chicken with a spicy, crunchy coat." />
+        <dish key="burger" name="Beef Burger" category="Fast Food" image="dish_burger" spicy="0" prep="12"
+            sizes="Single:100,Double:150" addons="Cheese slice:40,Fries:80"
+            desc="Grilled beef patty, cheese, lettuce and house sauce." />
+        <dish key="pizza" name="Chicken Pizza" category="Fast Food" image="dish_pizza" spicy="1" prep="20"
+            sizes="8 inch:70,10 inch:100,12 inch:135" addons="Extra cheese:80"
+            desc="Chicken, capsicum, onion and mozzarella on a hand-tossed base." />
+        <dish key="fries" name="French Fries" category="Fast Food" image="dish_fries" spicy="0" prep="8"
+            sizes="Regular:100,Large:150" addons="Cheese dip:40"
+            desc="Crispy salted fries." />
+        <dish key="fuchka" name="Fuchka" category="Street Food" image="dish_fuchka" spicy="2" prep="8"
+            addons="Extra tok:15"
+            desc="Crisp shells filled with spiced chickpeas and egg, with tamarind water." />
+        <dish key="chotpoti" name="Chotpoti" category="Street Food" image="dish_chotpoti" spicy="2" prep="8"
+            addons="Extra egg:15"
+            desc="Warm yellow-pea curry topped with egg, onion and tamarind." />
+        <dish key="singara" name="Singara (4 pcs)" category="Street Food" image="dish_singara" spicy="1" prep="5"
+            desc="Potato-filled pastry triangles, fried fresh." />
+        <dish key="samosa" name="Samosa (4 pcs)" category="Street Food" image="dish_samosa" spicy="1" prep="5"
+            desc="Crisp pastry filled with spiced mince or vegetables." />
+        <dish key="jhalmuri" name="Jhalmuri" category="Street Food" image="dish_jhalmuri" spicy="2" prep="5"
+            desc="Puffed rice with mustard oil, onion, chilli and chanachur." />
+        <dish key="haleem" name="Beef Haleem" category="Bangla" image="dish_haleem" spicy="2" prep="10"
+            sizes="Small bowl:100,Large bowl:180" addons="Naan:40"
+            desc="Slow-cooked lentils, wheat and beef, topped with fried onion and lemon." />
+        <dish key="roshogolla" name="Roshogolla (4 pcs)" category="Sweets" image="dish_roshogolla" spicy="0" prep="5"
+            desc="Soft chhena balls in light sugar syrup." />
+        <dish key="mishti_doi" name="Mishti Doi" category="Sweets" image="dish_mishti_doi" spicy="0" prep="5"
+            sizes="Cup:100,Small pot:250"
+            desc="Sweet caramelised yoghurt set in a clay pot." />
+        <dish key="payesh" name="Payesh" category="Sweets" image="dish_payesh" spicy="0" prep="5"
+            desc="Rice pudding with milk, date-palm jaggery and cardamom." />
+        <dish key="falooda" name="Falooda" category="Sweets" image="dish_falooda" spicy="0" prep="8"
+            addons="Extra ice cream:50"
+            desc="Rose milk with vermicelli, basil seeds, jelly and ice cream." />
+        <dish key="borhani" name="Borhani" category="Drinks" image="dish_borhani" spicy="1" prep="3"
+            sizes="Glass:100,Half litre:200"
+            desc="Spiced yoghurt drink with mint, the classic biryani partner." />
+        <dish key="lassi" name="Lassi" category="Drinks" image="dish_lassi" spicy="0" prep="5"
+            desc="Thick sweet yoghurt drink." />
+        <dish key="tea" name="Milk Tea" category="Drinks" image="dish_tea" spicy="0" prep="3"
+            desc="Strong tea with condensed milk." />
+        <dish key="pitha" name="Bhapa Pitha (2 pcs)" category="Sweets" image="dish_pitha" spicy="0" prep="10"
+            desc="Steamed rice-flour cakes with coconut and date-palm jaggery." />
+        <dish key="cake" name="Chocolate Pastry" category="Bakery" image="dish_cake" spicy="0" prep="3"
+            desc="Layered chocolate sponge with ganache." />
+        <dish key="firni" name="Firni" category="Sweets" image="dish_firni" spicy="0" prep="3"
+            desc="Chilled ground-rice pudding set in a clay bowl." />
+        <dish key="chicken_roast" name="Chicken Roast" category="Bangla" image="dish_chicken_roast" spicy="1" prep="15"
+            addons="Polao:60"
+            desc="Wedding-style chicken roast in a rich, mildly sweet gravy." />
+        <dish key="mutton_curry" name="Mutton Curry" category="Bangla" image="dish_mutton_curry" spicy="2" prep="20"
+            addons="Plain rice:30"
+            desc="Home-style mutton curry with potato." />
+        <dish key="chicken_curry" name="Deshi Chicken Curry" category="Bangla" image="dish_chicken_curry" spicy="2" prep="15"
+            addons="Plain rice:30"
+            desc="Free-range chicken curry, home style." />
+        <dish key="beef_curry" name="Beef Bhuna" category="Bangla" image="dish_beef_curry" spicy="2" prep="15"
+            addons="Plain rice:30,Paratha:20"
+            desc="Beef slow-fried with onion and whole spices." />
+        <dish key="egg_curry" name="Egg Curry" category="Bangla" image="dish_egg_curry" spicy="1" prep="10"
+            addons="Plain rice:30"
+            desc="Two boiled eggs in onion-tomato gravy." />
+    </dishes>
+
+    <!-- Khulna district: real restaurants -->
+    <restaurant id="khl_kamrul" name="Kamrul Hotel" cuisine="Chui jhal, Bangla" city="Khulna" area="Zero Point"
+        address="Zero Point, Khulna-Satkhira Road" lat="22.798140" lon="89.527350" rating="4.7" image="dish_chui_beef"
+        hours="09:00-23:00" minOrder="150" radius="8"
+        desc="A Zero Point favourite for chui jhal beef and mutton, cooked the Khulna way.">
+        <item ref="chui_beef" price="380" />
+        <item ref="chui_mutton" price="480" />
+        <item ref="beef_curry" price="240" />
+        <item ref="rice_dal" price="90" />
+        <item ref="bhorta" price="80" />
+        <item ref="paratha" price="15" />
+    </restaurant>
+    <restaurant id="khl_abbas" name="Abbas Hotel" cuisine="Chui jhal mutton" city="Khulna" area="Chuknagar, Dumuria"
+        address="Chuknagar Bazar, Dumuria" lat="22.840709" lon="89.296211" rating="4.8" image="dish_chui_mutton"
+        hours="10:00-22:00" minOrder="200" radius="15"
+        desc="Famous across Bangladesh for its chui jhal mutton.">
+        <item ref="chui_mutton" price="520" />
+        <item ref="rice_dal" price="90" />
+        <item ref="bhorta" price="70" />
+        <item ref="egg_curry" price="70" />
+    </restaurant>
+    <restaurant id="khl_canton" name="Canton Chinese Restaurant" cuisine="Chinese, Thai" city="Khulna" area="Roypara"
+        address="Ahsan Ahmed Road, Khulna" lat="22.813354" lon="89.566413" phone="+8801197267815" rating="4.5"
+        image="dish_thai_soup" hours="12:00-22:30" minOrder="250" radius="8"
+        desc="Chinese and Thai dishes in the city centre.">
+        <item ref="thai_soup" price="380" />
+        <item ref="fried_rice" price="280" />
+        <item ref="chowmein" price="300" />
+        <item ref="chili_chicken" price="360" discount="320" />
+        <item ref="fried_chicken" price="260" />
+    </restaurant>
+    <restaurant id="khl_kaifang" name="Kaifang Chinese Restaurant" cuisine="Chinese" city="Khulna" area="Roypara"
+        address="Jessore Road, Khulna" lat="22.819171" lon="89.557458" rating="4.4" image="dish_chowmein"
+        hours="12:00-22:30" minOrder="250" radius="8"
+        desc="Chinese favourites on Jessore Road.">
+        <item ref="thai_soup" price="360" />
+        <item ref="fried_rice" price="260" />
+        <item ref="chowmein" price="280" />
+        <item ref="chili_chicken" price="340" />
+    </restaurant>
+    <restaurant id="khl_kacchighor" name="Kacchi Ghor" cuisine="Biryani, Kacchi" city="Khulna" area="Roypara"
+        address="KDA Avenue, Khulna" lat="22.810322" lon="89.561359" rating="4.6" image="dish_kacchi"
+        hours="11:00-23:00" minOrder="200" radius="8"
+        desc="Kacchi biryani, polao and borhani on KDA Avenue.">
+        <item ref="kacchi" price="350" />
+        <item ref="chicken_biryani" price="250" discount="220" />
+        <item ref="morog_polao" price="260" />
+        <item ref="tehari" price="190" />
+        <item ref="borhani" price="60" />
+        <item ref="firni" price="60" />
+    </restaurant>
+    <restaurant id="khl_mejbanbari" name="Mejban Bari, Khulna" cuisine="Mezbani, Bangla" city="Khulna" area="Zero Point"
+        address="Khulna-Satkhira Highway, Zero Point" lat="22.799518" lon="89.535360" rating="4.5" image="dish_mezban"
+        hours="11:00-23:00" minOrder="200" radius="8"
+        desc="Chattogram-style mezbani beef and kala bhuna.">
+        <item ref="mezban" price="320" />
+        <item ref="kala_bhuna" price="300" />
+        <item ref="rice_dal" price="90" />
+        <item ref="borhani" price="60" />
+    </restaurant>
+    <restaurant id="khl_ctgdarbar" name="Chittagong Darbar" cuisine="Chattogram food" city="Khulna" area="Zero Point"
+        address="Zero Point, Khulna" lat="22.798618" lon="89.528841" rating="4.4" image="dish_kala_bhuna"
+        hours="11:00-23:00" minOrder="200" radius="8"
+        desc="Kala bhuna, mezban and more from Chattogram.">
+        <item ref="kala_bhuna" price="310" />
+        <item ref="mezban" price="330" />
+        <item ref="beef_curry" price="250" />
+        <item ref="paratha" price="15" />
+    </restaurant>
+    <restaurant id="khl_fanfair" name="Fan Fair" cuisine="Cakes, Burgers" city="Khulna" area="Roypara"
+        address="South Central Road, Khulna" lat="22.810732" lon="89.568190" rating="4.5" image="dish_cake"
+        hours="09:00-22:00" minOrder="150" radius="8"
+        desc="Pastries, cakes and burgers on South Central Road.">
+        <item ref="cake" price="90" />
+        <item ref="burger" price="220" />
+        <item ref="fries" price="120" />
+        <item ref="samosa" price="60" />
+    </restaurant>
+    <restaurant id="khl_cloud9" name="Cloud 9" cuisine="Fast food, Cafe" city="Khulna" area="Roypara"
+        address="KDA Avenue, Khulna" lat="22.810002" lon="89.561232" rating="4.4" image="dish_pizza"
+        hours="11:00-23:00" minOrder="200" radius="8"
+        desc="Pizza, fried chicken and shakes on KDA Avenue.">
+        <item ref="pizza" price="650" discount="590" />
+        <item ref="fried_chicken" price="240" />
+        <item ref="burger" price="250" />
+        <item ref="fries" price="130" />
+        <item ref="lassi" price="90" />
+    </restaurant>
+    <restaurant id="khl_countrylounge" name="Country Lounge" cuisine="Kebab, Grill" city="Khulna" area="Roypara"
+        address="KDA Avenue, Khulna" lat="22.810322" lon="89.561262" rating="4.3" image="dish_tikka"
+        hours="16:00-23:30" minOrder="200" radius="8"
+        desc="Evening kebabs and grills.">
+        <item ref="tikka" price="220" />
+        <item ref="seekh" price="200" />
+        <item ref="tandoori" price="650" />
+        <item ref="naan" price="40" />
+    </restaurant>
+    <restaurant id="khl_firefly" name="Firefly Restaurant" cuisine="Chinese, Grill" city="Khulna" area="Kholabaria"
+        address="Khulna City Bypass, Batiaghata" lat="22.784931" lon="89.539953" rating="4.3" image="dish_tandoori"
+        hours="12:00-23:00" minOrder="250" radius="10"
+        desc="Fried rice, grilled chicken and naan by the city bypass.">
+        <item ref="fried_rice" price="250" />
+        <item ref="chili_chicken" price="330" />
+        <item ref="tandoori" price="620" />
+        <item ref="naan" price="35" />
+    </restaurant>
+    <restaurant id="khl_aljamil" name="Al Jamil's Fish Grill &amp; BBQ" cuisine="Fish, BBQ" city="Khulna" area="Kartikkul, Dighalia"
+        address="Khulna City Bypass, Dighalia" lat="22.873159" lon="89.491569" rating="4.6" image="dish_hilsa_fry"
+        hours="12:00-23:00" minOrder="250" radius="10"
+        desc="Hilsa, prawns and charcoal grills.">
+        <item ref="hilsa_fry" price="300" />
+        <item ref="shorshe_ilish" price="380" />
+        <item ref="chingri" price="450" />
+        <item ref="rui" price="180" />
+        <item ref="tandoori" price="640" />
+        <item ref="naan" price="40" />
+    </restaurant>
+    <restaurant id="khl_sourav" name="Hotel Sourav" cuisine="Bangla" city="Khulna" area="Roypara"
+        address="Jessore Road, Khulna" lat="22.816237" lon="89.563168" rating="4.3" image="dish_rice_dal"
+        hours="07:00-23:00" minOrder="100" radius="8"
+        desc="Everyday Bangla meals on Jessore Road.">
+        <item ref="rice_dal" price="80" />
+        <item ref="chicken_curry" price="180" />
+        <item ref="egg_curry" price="60" />
+        <item ref="rui" price="150" />
+        <item ref="khichuri" price="200" />
+    </restaurant>
+    <restaurant id="khl_mannan" name="Mannan Chotpoti" cuisine="Street food" city="Khulna" area="Roypara"
+        address="Lower Jessore Road, Khulna" lat="22.815378" lon="89.564988" rating="4.6" image="dish_chotpoti"
+        hours="15:00-22:00" minOrder="80" radius="6"
+        desc="Chotpoti and fuchka, a Khulna evening snack stop.">
+        <item ref="chotpoti" price="50" />
+        <item ref="fuchka" price="60" />
+        <item ref="jhalmuri" price="30" />
+    </restaurant>
+    <restaurant id="khl_raihan" name="Raihan Bakery" cuisine="Bakery, Snacks" city="Khulna" area="Labanchara"
+        address="Labanchara, Khulna" lat="22.778493" lon="89.580857" rating="4.2" image="dish_singara"
+        hours="07:00-22:00" minOrder="80" radius="6"
+        desc="Fresh singara, samosa, pitha and cakes.">
+        <item ref="singara" price="40" />
+        <item ref="samosa" price="50" />
+        <item ref="pitha" price="40" />
+        <item ref="cake" price="70" />
+        <item ref="tea" price="15" />
+    </restaurant>
+    <restaurant id="khl_rustom" name="Rustom's Cafe" cuisine="Cafe" city="Khulna" area="Khulna University"
+        address="Khulna University campus" lat="22.802780" lon="89.533089" rating="4.5" image="dish_tea"
+        hours="00:00-23:59" minOrder="60" radius="5"
+        desc="Open round the clock near Khulna University.">
+        <item ref="tea" price="20" />
+        <item ref="lassi" price="70" />
+        <item ref="singara" price="40" />
+        <item ref="shawarma" price="140" />
+    </restaurant>
+    <restaurant id="khl_jamila" name="Jamila Hotel &amp; Restaurant" cuisine="Bangla" city="Khulna" area="Horintana"
+        address="Dakshin Baniakhamar Main Road, Khulna" lat="22.797851" lon="89.563378" rating="4.3" image="dish_khichuri"
+        hours="07:00-23:00" minOrder="100" radius="8"
+        desc="Khichuri, curries and paratha.">
+        <item ref="khichuri" price="210" />
+        <item ref="beef_curry" price="230" />
+        <item ref="chicken_roast" price="180" />
+        <item ref="paratha" price="15" />
+    </restaurant>
+    <restaurant id="khl_adighosh" name="Adi Gosh Hotel and Restaurant" cuisine="Bangla, Sweets" city="Khulna" area="Fulbarigate"
+        address="Khulna-Jashore Road, Fulbarigate" lat="22.897067" lon="89.509719" rating="4.4" image="dish_roshogolla"
+        hours="07:00-22:00" minOrder="100" radius="8"
+        desc="Bangla meals and sweets at Fulbarigate.">
+        <item ref="rice_dal" price="80" />
+        <item ref="egg_curry" price="60" />
+        <item ref="roshogolla" price="100" />
+        <item ref="mishti_doi" price="80" />
+        <item ref="paratha" price="15" />
+    </restaurant>
+    <restaurant id="khl_gazi" name="Gazi Hotel" cuisine="Bangla" city="Khulna" area="Phultala"
+        address="Khulna-Jashore Highway, Phultala" lat="22.941703" lon="89.484022" rating="4.2" image="dish_beef_curry"
+        hours="07:00-23:00" minOrder="100" radius="10"
+        desc="Highway hotel in Phultala serving rice and curry.">
+        <item ref="rice_dal" price="80" />
+        <item ref="beef_curry" price="220" />
+        <item ref="chicken_curry" price="170" />
+        <item ref="egg_curry" price="60" />
+    </restaurant>
+    <restaurant id="khl_shawarmahouse" name="Shawarma House" cuisine="Shawarma, Fast food" city="Khulna" area="KDA Avenue"
+        address="12 KDA Avenue, Khulna" lat="22.811419" lon="89.559185" rating="4.3" image="dish_shawarma"
+        hours="12:00-23:00" minOrder="150" radius="8"
+        desc="Shawarma and fries on KDA Avenue.">
+        <item ref="shawarma" price="160" />
+        <item ref="fried_chicken" price="230" />
+        <item ref="fries" price="120" />
+        <item ref="lassi" price="80" />
+    </restaurant>
+    <restaurant id="khl_kababz" name="Kababz" cuisine="Kebab" city="Khulna" area="Shibbari More"
+        address="KDA Extension Building, Shibbari More" lat="22.822232" lon="89.552929" rating="4.4" image="dish_seekh"
+        hours="15:00-23:30" minOrder="150" radius="8"
+        desc="Kebabs and naan at Shibbari More.">
+        <item ref="seekh" price="190" />
+        <item ref="tikka" price="210" />
+        <item ref="shami" price="120" />
+        <item ref="naan" price="40" />
+        <item ref="haleem" price="150" />
+    </restaurant>
+
+    <!-- Other cities: invented restaurants in real neighbourhoods -->
+    <restaurant id="dhk_gulshan_grill" name="Gulshan Grill House" cuisine="Kebab, Grill" city="Dhaka" area="Gulshan 1"
+        address="Gulshan Avenue, Gulshan 1" lat="23.780600" lon="90.416600" rating="4.6" image="dish_tandoori"
+        hours="12:00-23:30" minOrder="300" radius="8" desc="Charcoal grills and kebabs.">
+        <item ref="tandoori" price="720" />
+        <item ref="tikka" price="260" />
+        <item ref="seekh" price="240" />
+        <item ref="naan" price="50" />
+        <item ref="borhani" price="80" />
+    </restaurant>
+    <restaurant id="dhk_dhanmondi_biryani" name="Dhanmondi Biryani Ghar" cuisine="Biryani" city="Dhaka" area="Dhanmondi 27"
+        address="Road 27, Dhanmondi" lat="23.756000" lon="90.375000" rating="4.7" image="dish_kacchi"
+        hours="11:00-23:00" minOrder="250" radius="8" desc="Kacchi, tehari and borhani.">
+        <item ref="kacchi" price="420" />
+        <item ref="tehari" price="220" />
+        <item ref="chicken_biryani" price="280" />
+        <item ref="borhani" price="70" />
+        <item ref="firni" price="70" />
+    </restaurant>
+    <restaurant id="dhk_mirpur_fuchka" name="Mirpur Fuchka Corner" cuisine="Street food" city="Dhaka" area="Mirpur 10"
+        address="Mirpur 10 Roundabout" lat="23.806900" lon="90.368600" rating="4.5" image="dish_fuchka"
+        hours="15:00-23:00" minOrder="100" radius="6" desc="Fuchka, chotpoti and jhalmuri.">
+        <item ref="fuchka" price="80" />
+        <item ref="chotpoti" price="70" />
+        <item ref="jhalmuri" price="40" />
+        <item ref="falooda" price="200" />
+    </restaurant>
+    <restaurant id="dhk_uttara_chinese" name="Uttara Chinese Garden" cuisine="Chinese, Thai" city="Dhaka" area="Uttara Sector 7"
+        address="Sector 7, Uttara" lat="23.872800" lon="90.397500" rating="4.4" image="dish_chowmein"
+        hours="12:00-23:00" minOrder="300" radius="8" desc="Chinese and Thai for families.">
+        <item ref="thai_soup" price="420" />
+        <item ref="fried_rice" price="320" />
+        <item ref="chowmein" price="340" />
+        <item ref="chili_chicken" price="420" />
+    </restaurant>
+    <restaurant id="dhk_puran_dhaka" name="Puran Dhaka Bhoj" cuisine="Old Dhaka food" city="Dhaka" area="Lalbagh"
+        address="Lalbagh Road, Old Dhaka" lat="23.719000" lon="90.388000" rating="4.6" image="dish_haleem"
+        hours="10:00-23:30" minOrder="200" radius="7" desc="Haleem, tehari and shami kebab.">
+        <item ref="haleem" price="180" />
+        <item ref="tehari" price="200" />
+        <item ref="shami" price="140" />
+        <item ref="morog_polao" price="300" />
+    </restaurant>
+    <restaurant id="ctg_agrabad_mezban" name="Agrabad Mezban Ghar" cuisine="Mezbani" city="Chattogram" area="Agrabad"
+        address="Agrabad Commercial Area" lat="22.326000" lon="91.811000" rating="4.7" image="dish_mezban"
+        hours="11:00-23:00" minOrder="250" radius="8" desc="Mezbani beef and kala bhuna.">
+        <item ref="mezban" price="340" />
+        <item ref="kala_bhuna" price="320" />
+        <item ref="rice_dal" price="100" />
+    </restaurant>
+    <restaurant id="ctg_gec_fastfood" name="GEC Fast Food Hub" cuisine="Fast food" city="Chattogram" area="GEC Circle"
+        address="GEC Circle, Chattogram" lat="22.359300" lon="91.821500" rating="4.3" image="dish_burger"
+        hours="11:00-23:30" minOrder="200" radius="8" desc="Burgers, pizza and fries.">
+        <item ref="burger" price="260" />
+        <item ref="pizza" price="680" />
+        <item ref="fries" price="140" />
+        <item ref="fried_chicken" price="270" />
+    </restaurant>
+    <restaurant id="syl_zindabazar" name="Zindabazar Bhoj" cuisine="Bangla, Fish" city="Sylhet" area="Zindabazar"
+        address="Zindabazar, Sylhet" lat="24.895500" lon="91.869000" rating="4.5" image="dish_rui"
+        hours="10:00-22:30" minOrder="150" radius="8" desc="Rice, fish and bhorta.">
+        <item ref="rui" price="170" />
+        <item ref="bhorta" price="90" />
+        <item ref="rice_dal" price="90" />
+        <item ref="chicken_curry" price="190" />
+    </restaurant>
+    <restaurant id="raj_padma" name="Padma Pitha Ghar" cuisine="Pitha, Sweets" city="Rajshahi" area="Shaheb Bazar"
+        address="Shaheb Bazar, Rajshahi" lat="24.366000" lon="88.600000" rating="4.5" image="dish_pitha"
+        hours="08:00-22:00" minOrder="100" radius="7" desc="Pitha, mishti doi and roshogolla.">
+        <item ref="pitha" price="40" />
+        <item ref="mishti_doi" price="90" />
+        <item ref="roshogolla" price="100" />
+        <item ref="payesh" price="90" />
+    </restaurant>
+    <restaurant id="bar_kirtankhola" name="Kirtankhola Ilish Ghor" cuisine="Hilsa, Fish" city="Barishal" area="Sadar Road"
+        address="Sadar Road, Barishal" lat="22.702000" lon="90.365000" rating="4.6" image="dish_shorshe_ilish"
+        hours="11:00-22:30" minOrder="200" radius="8" desc="Hilsa every way, straight from the river.">
+        <item ref="shorshe_ilish" price="360" />
+        <item ref="hilsa_fry" price="280" />
+        <item ref="chingri" price="430" />
+        <item ref="rice_dal" price="90" />
+    </restaurant>
+    <restaurant id="rng_jahaj" name="Jahaj Company Cafe" cuisine="Cafe, Fast food" city="Rangpur" area="Jahaj Company More"
+        address="Jahaj Company More, Rangpur" lat="25.748000" lon="89.252000" rating="4.3" image="dish_shawarma"
+        hours="10:00-23:00" minOrder="150" radius="7" desc="Shawarma, fries and lassi.">
+        <item ref="shawarma" price="150" />
+        <item ref="fries" price="110" />
+        <item ref="lassi" price="70" />
+        <item ref="tea" price="15" />
+    </restaurant>
+    <restaurant id="jsr_chuijhal" name="Jashore Chui Jhal Point" cuisine="Chui jhal" city="Jashore" area="Doratana"
+        address="Doratana More, Jashore" lat="23.166500" lon="89.209000" rating="4.4" image="dish_chui_beef"
+        hours="10:00-22:30" minOrder="150" radius="8" desc="Chui jhal beef and mutton.">
+        <item ref="chui_beef" price="360" />
+        <item ref="chui_mutton" price="460" />
+        <item ref="rice_dal" price="80" />
+    </restaurant>
+    <restaurant id="cml_kandirpar" name="Kandirpar Mishti Ghar" cuisine="Sweets" city="Cumilla" area="Kandirpar"
+        address="Kandirpar, Cumilla" lat="23.461300" lon="91.180900" rating="4.6" image="dish_mishti_doi"
+        hours="08:00-22:00" minOrder="100" radius="7" desc="Sweets, doi and firni.">
+        <item ref="roshogolla" price="110" />
+        <item ref="mishti_doi" price="90" />
+        <item ref="firni" price="60" />
+        <item ref="payesh" price="100" />
+    </restaurant>
+    <restaurant id="mym_brahmaputra" name="Brahmaputra Kitchen" cuisine="Bangla" city="Mymensingh" area="Ganginarpar"
+        address="Ganginarpar, Mymensingh" lat="24.753600" lon="90.407300" rating="4.4" image="dish_chicken_roast"
+        hours="10:00-23:00" minOrder="150" radius="7" desc="Roast, polao and curries.">
+        <item ref="chicken_roast" price="190" />
+        <item ref="morog_polao" price="270" />
+        <item ref="mutton_curry" price="360" />
+        <item ref="rice_dal" price="80" />
+    </restaurant>
+</catalog>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/kitchen_sales" android:title="@string/sales_dashboard_title" />
+    <item android:id="@+id/kitchen_busy" android:title="@string/busy_title" />
+    <item android:id="@+id/kitchen_menu_editor" android:title="@string/menu_editor_title" />
+    <item android:id="@+id/kitchen_profile" android:title="@string/restaurant_profile_title" />
+    <item android:id="@+id/kitchen_coupons" android:title="@string/coupons_title" />
+    <item android:id="@+id/kitchen_reviews" android:title="@string/reviews_title" />
+    <item android:id="@+id/kitchen_account" android:title="@string/nav_profile" />
+    <item android:id="@+id/kitchen_settings" android:title="@string/nav_settings" />
+    <item android:id="@+id/kitchen_help" android:title="@string/nav_help" />
+    <item android:id="@+id/kitchen_logout" android:title="@string/nav_logout" />
+</menu>

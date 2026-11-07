@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:paddingVertical="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.FoodRush.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginVertical="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="14dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="84dp">
+
+            <TextView
+                android:id="@+id/lunch_name"
+                style="@style/Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2" />
+
+            <TextView
+                android:id="@+id/lunch_category"
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/lunch_old_price"
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/amber_dark" />
+
+            <TextView
+                android:id="@+id/lunch_price"
+                style="@style/Text.Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/lunch_image"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_gravity="end|center_vertical"
+        android:contentDescription="@null"
+        android:elevation="10dp" />
+</FrameLayout>

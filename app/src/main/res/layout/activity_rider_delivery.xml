@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/delivery_bar"
+        layout="@layout/view_top_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/delivery_map"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/delivery_scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delivery_bar" />
+
+    <TextView
+        style="@style/Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:paddingHorizontal="6dp"
+        android:text="@string/map_attribution"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/delivery_map"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/delivery_scroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="420dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/delivery_status"
+                style="@style/Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/delivery_distance"
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Text.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/pickups" />
+
+            <LinearLayout
+                android:id="@+id/delivery_stops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                style="@style/Text.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/drop_off" />
+
+            <TextView
+                android:id="@+id/delivery_customer"
+                style="@style/Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/delivery_items"
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delivery_chat"
+                    style="@style/Widget.FoodRush.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/chat"
+                    android:textSize="12sp"
+                    app:icon="@drawable/ic_chat"
+                    app:iconTint="@color/amber_dark" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delivery_call"
+                    style="@style/Widget.FoodRush.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/call"
+                    android:textSize="12sp"
+                    app:icon="@drawable/ic_call"
+                    app:iconTint="@color/amber_dark" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delivery_navigate"
+                    style="@style/Widget.FoodRush.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="@string/navigate"
+                    android:textSize="12sp"
+                    app:icon="@drawable/ic_directions"
+                    app:iconTint="@color/amber_dark" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delivery_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/deliver_with_pin" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

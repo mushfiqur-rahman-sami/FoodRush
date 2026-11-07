@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FoodRush" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/amber</item>
+        <item name="colorPrimaryVariant">@color/amber_dark</item>
+        <item name="colorOnPrimary">@color/on_amber</item>
+        <item name="colorSecondary">@color/amber</item>
+        <item name="colorOnSecondary">@color/on_amber</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorControlNormal">@color/text_primary</item>
+        <item name="colorControlActivated">@color/amber_dark</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="materialButtonStyle">@style/Widget.FoodRush.PillButton</item>
+        <item name="textInputStyle">@style/Widget.FoodRush.Input</item>
+        <item name="snackbarButtonStyle">@style/Widget.FoodRush.SnackAction</item>
+    </style>
+
+    <style name="Theme.FoodRush.Splash">
+        <item name="android:windowBackground">@color/cream</item>
+    </style>
+
+    <style name="Widget.FoodRush.PillButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="cornerRadius">28dp</item>
+        <item name="backgroundTint">@color/amber</item>
+        <item name="android:textColor">@color/on_amber</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Widget.FoodRush.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Widget.FoodRush.SnackAction" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">@color/amber</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.FoodRush.Input" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="boxStrokeColor">@color/amber_dark</item>
+        <item name="hintTextColor">@color/amber_dark</item>
+    </style>
+
+    <style name="Widget.FoodRush.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="28" xmlns:tools="http://schemas.android.com/tools">@color/amber_dark</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="28" xmlns:tools="http://schemas.android.com/tools">@color/amber</item>
+    </style>
+
+    <style name="Widget.FoodRush.IconButton" parent="">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="Text.Light" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text.Display" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Section" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="Text.Title" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Text.Body" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text.Caption" parent="">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Text.Price" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="Widget.FoodRush.RoleButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/role_text</item>
+        <item name="backgroundTint">@color/role_background</item>
+        <item name="strokeColor">@color/amber_dark</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="RoundedImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="CircleImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

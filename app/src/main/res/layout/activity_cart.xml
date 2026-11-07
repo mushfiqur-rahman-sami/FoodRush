@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/cart_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@id/cart_place"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="16dp">
+
+            <TextView
+                style="@style/Text.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cart_title_1"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/Text.Display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cart_title_2" />
+
+            <LinearLayout
+                android:id="@+id/cart_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_bag"
+                    app:tint="@color/amber" />
+
+                <TextView
+                    style="@style/Text.Section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/cart_empty_title" />
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/cart_empty_text" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cart_browse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingHorizontal="32dp"
+                    android:text="@string/cart_browse" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cart_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cart_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.FoodRush.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="6dp">
+
+                        <include
+                            android:id="@+id/cart_address"
+                            layout="@layout/view_info_row" />
+
+                        <include
+                            android:id="@+id/cart_time"
+                            layout="@layout/view_info_row" />
+
+                        <include
+                            android:id="@+id/cart_payment"
+                            layout="@layout/view_info_row" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/cart_coupon"
+                        style="@style/Text.Body"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:autofillHints=""
+                        android:background="@drawable/bg_chip"
+                        android:hint="@string/coupon_hint"
+                        android:inputType="textCapCharacters"
+                        android:paddingHorizontal="20dp"
+                        android:textColorHint="@color/text_secondary" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cart_coupon_apply"
+                        style="@style/Widget.FoodRush.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apply" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cart_coupon_status"
+                    style="@style/Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/cart_route_status"
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/cart_problem"
+                    style="@style/Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_chip"
+                    android:padding="12dp"
+                    android:textColor="@color/error"
+                    android:visibility="gone" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:stretchColumns="1">
+
+                    <TableRow
+                        android:id="@+id/cart_subtotal_row"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:text="@string/subtotal" />
+
+                        <TextView
+                            android:id="@+id/cart_subtotal"
+                            style="@style/Text.Caption"
+                            android:gravity="end" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/cart_discount_row"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:text="@string/discount" />
+
+                        <TextView
+                            android:id="@+id/cart_discount"
+                            style="@style/Text.Caption"
+                            android:gravity="end" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/cart_vat_row"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:text="@string/vat" />
+
+                        <TextView
+                            android:id="@+id/cart_vat"
+                            style="@style/Text.Caption"
+                            android:gravity="end" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/cart_fee_row"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:text="@string/delivery_fee" />
+
+                        <TextView
+                            android:id="@+id/cart_fee"
+                            style="@style/Text.Caption"
+                            android:gravity="end" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/cart_total_row"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            style="@style/Text.Section"
+                            android:text="@string/total" />
+
+                        <TextView
+                            android:id="@+id/cart_total"
+                            style="@style/Text.Section"
+                            android:gravity="end" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/cart_close"
+        style="@style/Widget.FoodRush.IconButton"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/close"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cart_place"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginVertical="12dp"
+        android:text="@string/place_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

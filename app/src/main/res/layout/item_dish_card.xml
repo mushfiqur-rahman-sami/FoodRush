@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FrameLayout: the plate sits above the card and overlaps its top edge, as in the design. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="172dp"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingHorizontal="6dp"
+    android:paddingBottom="14dp">
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.FoodRush.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:clickable="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="100dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/dish_name"
+                style="@style/Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/dish_category"
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_star"
+                    app:tint="@color/amber_dark" />
+
+                <TextView
+                    android:id="@+id/dish_rating"
+                    style="@style/Text.Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dish_price"
+                    style="@style/Text.Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/dish_image"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@null"
+        android:elevation="10dp" />
+
+    <ImageButton
+        android:id="@+id/dish_favourite"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="28dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/add_favourite"
+        android:elevation="11dp"
+        android:padding="11dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_heart_outline"
+        app:tint="@color/amber_dark" />
+</FrameLayout>

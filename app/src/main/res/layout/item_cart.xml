@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/cart_image"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cart_name"
+        style="@style/Text.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@id/cart_price"
+        app:layout_constraintStart_toEndOf="@id/cart_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cart_size"
+        style="@style/Text.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/cart_name"
+        app:layout_constraintStart_toStartOf="@id/cart_name"
+        app:layout_constraintTop_toBottomOf="@id/cart_name" />
+
+    <TextView
+        android:id="@+id/cart_extras"
+        style="@style/Text.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/cart_name"
+        app:layout_constraintStart_toStartOf="@id/cart_name"
+        app:layout_constraintTop_toBottomOf="@id/cart_size" />
+
+    <com.foodrush.app.view.QuantityStepperView
+        android:id="@+id/cart_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/cart_image"
+        app:layout_constraintTop_toBottomOf="@id/cart_extras" />
+
+    <TextView
+        android:id="@+id/cart_price"
+        style="@style/Text.Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

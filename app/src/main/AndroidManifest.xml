@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <!-- In-app voice calls. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <!-- Only apps signed with the same key can use FoodRushProvider. -->
+    <permission
+        android:name="com.foodrush.app.permission.ACCESS_DATA"
+        android:protectionLevel="signature" />
+
+    <!-- Package visibility on API 30+ for the implicit intents the app starts. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+            <data android:scheme="tel" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="smsto" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".FoodRushApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FoodRush"
+        tools:targetApi="36">
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FoodRush.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.OnboardingActivity" android:exported="false" />
+        <activity android:name=".ui.LoginActivity" android:exported="false" />
+        <activity android:name=".ui.RegisterActivity" android:exported="false" />
+        <activity android:name=".ui.ForgotPasswordActivity" android:exported="false" />
+        <activity android:name=".ui.MainActivity" android:exported="false" />
+        <activity android:name=".ui.SearchActivity" android:exported="false" android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".ui.CategoriesActivity" android:exported="false" />
+        <activity android:name=".ui.RestaurantActivity" android:exported="false" />
+        <activity android:name=".ui.DishActivity" android:exported="false" />
+        <activity android:name=".ui.CartActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.CheckoutActivity" android:exported="false" />
+        <activity android:name=".ui.PaymentActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.AddressPickerActivity" android:exported="false" />
+        <activity android:name=".ui.OrderPlacedActivity" android:exported="false" />
+        <activity android:name=".ui.TrackingActivity" android:exported="false" android:launchMode="singleTop" />
+        <activity android:name=".ui.OrdersActivity" android:exported="false" />
+        <activity android:name=".ui.FavouritesActivity" android:exported="false" />
+        <activity android:name=".ui.ProfileActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.SettingsActivity" android:exported="false" />
+        <activity android:name=".ui.HelpActivity" android:exported="false" />
+        <activity android:name=".ui.WebPageActivity" android:exported="false" />
+        <activity android:name=".ui.ChatActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.CallActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            tools:targetApi="27" />
+        <activity android:name=".ui.restaurant.ClaimRestaurantActivity" android:exported="false" />
+        <activity android:name=".ui.restaurant.KitchenActivity" android:exported="false" android:launchMode="singleTop" />
+        <activity android:name=".ui.restaurant.MenuEditorActivity" android:exported="false" />
+        <activity android:name=".ui.restaurant.DishEditorActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.restaurant.RestaurantProfileActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.restaurant.CouponsActivity" android:exported="false" />
+        <activity android:name=".ui.restaurant.RestaurantReviewsActivity" android:exported="false" />
+        <activity android:name=".ui.rider.RiderHomeActivity" android:exported="false" android:launchMode="singleTop" />
+        <activity android:name=".ui.rider.RiderDeliveryActivity" android:exported="false" />
+        <activity android:name=".ui.rider.RiderDashboardActivity" android:exported="false" />
+        <activity android:name=".ui.restaurant.SalesDashboardActivity" android:exported="false" />
+
+        <service
+            android:name=".service.OrderTrackingService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+        <service
+            android:name=".service.RiderService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+        <service
+            android:name=".service.KitchenService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+        <service
+            android:name=".service.FoodRushMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receiver.BootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".provider.FoodRushProvider"
+            android:authorities="com.foodrush.app.provider"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.foodrush.app.permission.ACCESS_DATA" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.foodrush.app.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>

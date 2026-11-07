@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="amber">#F6C468</color>
+    <color name="amber_dark">#E9AE45</color>
+    <color name="on_amber">#3A2A08</color>
+    <color name="cream">#FBE8C8</color>
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_soft">#F7F5F1</color>
+    <color name="text_primary">#1F1F1F</color>
+    <color name="text_secondary">#8E8E8E</color>
+    <color name="divider">#E9E6E0</color>
+    <color name="shadow">#33B58F4B</color>
+    <color name="error">#C4442F</color>
+</resources>

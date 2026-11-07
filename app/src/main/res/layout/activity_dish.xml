@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toTopOf="@id/dish_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.FoodRush.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="150dp"
+                    android:paddingBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_star"
+                            app:tint="@color/amber_dark" />
+
+                        <TextView
+                            android:id="@+id/dish_rating"
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/dish_name"
+                            style="@style/Text.Display"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/dish_price"
+                            style="@style/Text.Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/dish_restaurant"
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/amber_dark" />
+
+                    <TextView
+                        android:id="@+id/dish_description"
+                        style="@style/Text.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/dish_meta"
+                        style="@style/Text.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp" />
+
+                    <TextView
+                        android:id="@+id/dish_sizes_title"
+                        style="@style/Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/choose_size"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/dish_sizes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:selectionRequired="true"
+                        app:singleSelection="true" />
+
+                    <TextView
+                        android:id="@+id/dish_extras_title"
+                        style="@style/Text.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/add_more_stuff"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/dish_extras"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/dish_image"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@null"
+                android:elevation="10dp" />
+
+            <ImageButton
+                android:id="@+id/dish_next"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="246dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_circle_surface"
+                android:contentDescription="@string/next_dish"
+                android:elevation="11dp"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_chevron_right" />
+
+            <ImageButton
+                android:id="@+id/dish_share"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="246dp"
+                android:background="@drawable/bg_circle_surface"
+                android:contentDescription="@string/share"
+                android:elevation="11dp"
+                android:padding="14dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_share" />
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/dish_close"
+        style="@style/Widget.FoodRush.IconButton"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/close"
+        android:elevation="12dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/dish_favourite"
+        style="@style/Widget.FoodRush.IconButton"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/add_favourite"
+        android:elevation="12dp"
+        android:src="@drawable/ic_heart_outline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/amber_dark" />
+
+    <LinearLayout
+        android:id="@+id/dish_bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.foodrush.app.view.QuantityStepperView
+            android:id="@+id/dish_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dish_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:textSize="13sp" />
+
+        <FrameLayout
+            android:id="@+id/dish_cart"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_circle_surface"
+            android:clickable="true"
+            android:contentDescription="@string/open_cart"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_bag" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

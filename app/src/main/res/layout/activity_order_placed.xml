@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/bg_circle_amber">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_check"
+                app:tint="@color/on_amber" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/Text.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/order_placed_title" />
+
+        <TextView
+            android:id="@+id/placed_message"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/placed_number"
+            style="@style/Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/placed_pin"
+            style="@style/Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_chip"
+            android:gravity="center"
+            android:padding="12dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:shrinkColumns="1"
+            android:stretchColumns="1">
+
+            <TableRow android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:paddingEnd="16dp"
+                    android:text="@string/items" />
+
+                <TextView
+                    android:id="@+id/placed_items"
+                    style="@style/Text.Body"
+                    android:layout_width="0dp"
+                    android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:paddingEnd="16dp"
+                    android:text="@string/address" />
+
+                <TextView
+                    android:id="@+id/placed_address"
+                    style="@style/Text.Body"
+                    android:layout_width="0dp"
+                    android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:paddingEnd="16dp"
+                    android:text="@string/payment" />
+
+                <TextView
+                    android:id="@+id/placed_payment"
+                    style="@style/Text.Body"
+                    android:layout_width="0dp"
+                    android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:paddingEnd="16dp"
+                    android:text="@string/subtotal" />
+
+                <TextView
+                    android:id="@+id/placed_subtotal"
+                    style="@style/Text.Body"
+                    android:layout_width="0dp"
+                    android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:paddingEnd="16dp"
+                    android:text="@string/discount" />
+
+                <TextView
+                    android:id="@+id/placed_discount"
+                    style="@style/Text.Body"
+                    android:layout_width="0dp"
+                    android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:paddingEnd="16dp"
+                    android:text="@string/vat" />
+
+                <TextView
+                    android:id="@+id/placed_vat"
+                    style="@style/Text.Body"
+                    android:layout_width="0dp"
+                    android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:paddingEnd="16dp"
+                    android:text="@string/delivery_fee" />
+
+                <TextView
+                    android:id="@+id/placed_fee"
+                    style="@style/Text.Body"
+                    android:layout_width="0dp"
+                    android:gravity="end" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="8dp">
+
+                <TextView
+                    style="@style/Text.Caption"
+                    android:paddingEnd="16dp"
+                    android:text="@string/total" />
+
+                <TextView
+                    android:id="@+id/placed_total"
+                    style="@style/Text.Body"
+                    android:layout_width="0dp"
+                    android:gravity="end" />
+            </TableRow>
+        </TableLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/placed_track"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/track_order" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/placed_home"
+            style="@style/Widget.FoodRush.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/back_home" />
+    </LinearLayout>
+</ScrollView>

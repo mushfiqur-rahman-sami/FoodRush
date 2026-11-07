@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RatingBarView">
+        <attr name="rating" format="float" />
+        <attr name="editable" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="QuantityStepperView">
+        <attr name="minValue" format="integer" />
+    </declare-styleable>
+</resources>

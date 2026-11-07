@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/sales_bar"
+        layout="@layout/view_top_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                style="@style/Text.Section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="@string/dash_sales" />
+
+            <GridLayout
+                android:id="@+id/sales_tiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2" />
+
+            <TextView
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/dash_last_7_days" />
+
+            <com.foodrush.app.view.BarChartView
+                android:id="@+id/sales_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                style="@style/Text.Section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/dash_top_dishes" />
+
+            <TextView
+                android:id="@+id/sales_top_empty"
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="@string/dash_no_sales"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/sales_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:orientation="vertical" />
+
+            <TextView
+                style="@style/Text.Section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/dash_stats" />
+
+            <GridLayout
+                android:id="@+id/sales_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

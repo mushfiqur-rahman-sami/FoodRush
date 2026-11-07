@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/editor_bar"
+        layout="@layout/view_top_bar" />
+
+    <TextView
+        style="@style/Text.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:text="@string/menu_editor_hint" />
+
+    <include
+        android:id="@+id/editor_state"
+        layout="@layout/view_state" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/editor_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editor_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/add_dish"
+        app:icon="@drawable/ic_add" />
+</LinearLayout>

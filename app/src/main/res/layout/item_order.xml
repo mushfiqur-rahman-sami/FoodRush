@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RelativeLayout: each piece is placed relative to the card edges or its neighbours. -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.FoodRush.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/order_status"
+            style="@style/Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_chip_selected"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="2dp"
+            android:textColor="@color/on_amber"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/order_total"
+            style="@style/Text.Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/order_items"
+            style="@style/Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_status"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="3" />
+
+        <TextView
+            android:id="@+id/order_date"
+            style="@style/Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_items"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/order_again"
+            style="@style/Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@id/order_date"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:text="@string/order_again"
+            android:textColor="@color/amber_dark"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FoodRush</string>
+    <string name="tagline">Bangladesh\'s food, delivered fast</string>
+    <string name="close">Close</string>
+    <string name="back">Back</string>
+    <string name="retry">Try again</string>
+    <string name="load_error">Couldn\'t load this. Check your connection and try again.</string>
+    <string name="offline_banner">You\'re offline. Showing saved data.</string>
+    <string name="airplane_banner">Airplane mode is on. You\'re offline.</string>
+    <string name="no_app_for_action">No app on this phone can do that.</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+
+    <string name="onboarding_title_1">Discover food you love</string>
+    <string name="onboarding_text_1">Browse dishes and restaurants close to you, all in one place.</string>
+    <string name="onboarding_title_2">Make it yours</string>
+    <string name="onboarding_text_2">Pick a size, add extras, and keep your favourites one tap away.</string>
+    <string name="onboarding_title_3">Follow every step</string>
+    <string name="onboarding_text_3">Follow your rider live on the map, chat or call them, and hand over with a PIN.</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get started</string>
+    <string name="skip">Skip</string>
+
+    <string name="login_title_1">Welcome</string>
+    <string name="login_title_2">back</string>
+    <string name="register_title_1">Create your</string>
+    <string name="register_title_2">account</string>
+    <string name="name">Full name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_password">New password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="no_account">New here? Create an account</string>
+    <string name="have_account">Already have an account? Sign in</string>
+    <string name="error_name">Enter your name</string>
+    <string name="error_email">Enter a valid email address</string>
+    <string name="error_password">Use at least 6 characters</string>
+    <string name="reset_title_1">Reset your</string>
+    <string name="reset_title_2">password</string>
+    <string name="reset_hint_firebase">We\'ll email you a link to choose a new password.</string>
+    <string name="reset_hint_local">Accounts are stored on this phone only, so you can set a new password here.</string>
+    <string name="reset_send">Send reset link</string>
+    <string name="reset_save">Save new password</string>
+    <string name="reset_sent">If an account uses this email, a reset link is on its way. Check your inbox and Spam folder.</string>
+    <string name="reset_done">Password updated. You can sign in now.</string>
+
+    <string name="open_menu">Open menu</string>
+    <string name="search">Search</string>
+    <string name="home_title_1">What would you like</string>
+    <string name="home_title_2">to eat?</string>
+    <string name="all_food">All food</string>
+    <string name="section_favourite">Favourite</string>
+    <string name="section_favourite_suffix">dishes</string>
+    <string name="section_offers">Today\'s offers</string>
+    <string name="section_lunch">Business lunch</string>
+    <string name="section_nearby">Nearest restaurants</string>
+    <string name="see_all">See all</string>
+    <string name="dish_of_day">Dish of the day</string>
+    <string name="coupon_copied">Code %1$s will be applied to your cart</string>
+    <string name="change_address">Change delivery address</string>
+    <string name="add_favourite">Add to favourites</string>
+    <string name="open_cart">Open cart</string>
+    <string name="no_dishes">No dishes here yet.</string>
+    <string name="categories_title">Categories</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_orders">My orders</string>
+    <string name="nav_favourites">Favourites</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_help">Help</string>
+    <string name="nav_logout">Sign out</string>
+
+    <string name="search_hint">Search dishes</string>
+    <string name="search_recent">Recent searches</string>
+    <string name="search_clear">Clear</string>
+    <string name="search_empty">Nothing matches \"%1$s\".</string>
+    <string name="filter_rating">Top rated</string>
+    <string name="filter_price">Lowest price</string>
+    <string name="filter_under">Under 300 tk</string>
+
+    <string name="call">Call</string>
+    <string name="directions">Directions</string>
+    <string name="share">Share</string>
+    <string name="menu_section">Menu</string>
+    <string name="reviews_section">Reviews</string>
+    <string name="add_review">Add review</string>
+    <string name="no_reviews">No reviews yet. Be the first.</string>
+    <string name="review_title">How was it?</string>
+    <string name="review_hint">Tell others about your meal</string>
+    <string name="review_error">Pick a star rating and write a few words.</string>
+    <string name="delivery_meta">%1$s · %2$s delivery</string>
+
+    <string name="next_dish">Next dish</string>
+    <string name="add_more_stuff">Add more stuff</string>
+    <string name="add_to_cart_price">Add to cart · %1$s</string>
+    <string name="added_to_cart">Added to cart</string>
+    <string name="view_cart">View cart</string>
+    <string name="plus_add">+ Add</string>
+    <string name="decrease">Decrease</string>
+    <string name="increase">Increase</string>
+    <string name="share_dish_text">Try %1$s at %2$s on FoodRush, only %3$s!</string>
+    <string name="from_restaurant">from %1$s</string>
+
+    <string name="cart_title_1">Your</string>
+    <string name="cart_title_2">Cart</string>
+    <string name="cart_empty_title">Your cart is empty</string>
+    <string name="cart_empty_text">Add something tasty and it will show up here.</string>
+    <string name="cart_browse">Browse food</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="discount">Discount</string>
+    <string name="delivery_fee">Delivery fee</string>
+    <string name="total">Total</string>
+    <string name="place_order">Place order</string>
+    <string name="coupon_hint">Coupon code</string>
+    <string name="apply">Apply</string>
+    <string name="coupon_invalid">That code isn\'t valid.</string>
+    <string name="coupon_applied">%1$s applied</string>
+    <string name="coupon_below_min">%1$s: %2$s</string>
+    <string name="remove">Remove</string>
+    <string name="remove_item_title">Remove %1$s?</string>
+    <string name="edit">Edit</string>
+    <string name="eta_asap">%1$s (ASAP)</string>
+    <string name="delivery_time_title">Delivery time</string>
+    <string name="time_asap">As soon as possible</string>
+    <string name="time_30">In about 30 minutes</string>
+    <string name="time_60">In about an hour</string>
+    <string name="eta_scheduled_30">In about 30 min</string>
+    <string name="eta_scheduled_60">In about 1 hour</string>
+    <string name="processing_payment">Processing dummy payment…</string>
+
+    <string name="payment_title_1">Payment</string>
+    <string name="payment_title_2">method</string>
+    <string name="payment_notice">Demo only. No real money moves, and card or wallet details are never saved.</string>
+    <string name="pay_cash">Cash on delivery</string>
+    <string name="pay_card">Card (dummy)</string>
+    <string name="card_number">Card number</string>
+    <string name="card_expiry">Expiry MM/YY</string>
+    <string name="card_cvv">CVV</string>
+    <string name="card_test_hint">Test card: 4242 4242 4242 4242</string>
+    <string name="use_this_method">Use this method</string>
+    <string name="error_card">Card number isn\'t valid</string>
+    <string name="error_expiry">Use a future date as MM/YY</string>
+    <string name="error_cvv">3 or 4 digits</string>
+
+    <string name="address_title">Delivery address</string>
+    <string name="address_hint">Search a place, use your location or tap the map.</string>
+    <string name="address_details">Apartment, floor or notes (optional)</string>
+    <string name="use_my_location">Use my location</string>
+    <string name="confirm_address">Confirm address</string>
+    <string name="location_failed">Couldn\'t get your location. Pick a spot on the map instead.</string>
+    <string name="map_attribution">© OpenStreetMap contributors</string>
+    <string name="marker_you">Delivery address</string>
+    <string name="marker_rider">Your rider</string>
+
+    <string name="order_placed_title">Order placed!</string>
+    <string name="order_placed_text">The restaurant has your order. Estimated delivery: about %1$d min.</string>
+    <string name="order_number">Order #%1$s</string>
+    <string name="track_order">Track order</string>
+    <string name="back_home">Back to home</string>
+    <string name="items">Items</string>
+    <string name="payment">Payment</string>
+    <string name="address">Address</string>
+
+    <string name="tracking_title">Tracking</string>
+    <string name="demo_note">No rider took this order in time, so FoodRush\'s demo rider is delivering it, faster than real time.</string>
+    <string name="share_order">Share with a contact</string>
+    <string name="share_order_text">My FoodRush order is on its way! It should arrive in about %1$d min.</string>
+    <string name="contact_no_number">That contact has no phone number.</string>
+    <string name="call_restaurant">Call restaurant</string>
+
+    <string name="stage_placed">Placed</string>
+    <string name="stage_preparing">Preparing</string>
+    <string name="stage_on_way">On the way</string>
+    <string name="stage_delivered">Delivered</string>
+    <string name="stage_placed_long">We\'ve got your order</string>
+    <string name="stage_preparing_long">The kitchen is preparing your food</string>
+    <string name="stage_delivered_long">Delivered. Enjoy your meal!</string>
+
+    <string name="orders_title">My orders</string>
+    <string name="orders_empty">You haven\'t ordered anything yet.</string>
+    <string name="favourites_title">Favourites</string>
+    <string name="favourites_empty">Tap the heart on a dish to save it here.</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="phone">Phone</string>
+    <string name="save_profile">Save changes</string>
+    <string name="profile_saved">Profile saved</string>
+    <string name="change_photo">Change photo</string>
+    <string name="photo_camera">Take a photo</string>
+    <string name="photo_gallery">Choose from gallery</string>
+    <string name="profile_photo">Profile photo</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="setting_dark">Dark mode</string>
+    <string name="setting_promos">Offer notifications</string>
+    <string name="setting_notifications">System notification settings</string>
+    <string name="terms">Terms of service</string>
+    <string name="privacy">Privacy policy</string>
+    <string name="cloud_on">Cloud sync: on (Firebase connected)</string>
+    <string name="cloud_off">Cloud sync: off. Accounts and orders stay on this phone.</string>
+    <string name="version_label">Version %1$s</string>
+
+    <string name="help_title">Help</string>
+    <string name="faq">Frequently asked questions</string>
+    <string name="email_support">Email support</string>
+    <string name="call_support">Call support</string>
+    <string name="support_email">support@foodrush.example</string>
+    <string name="support_phone">+8801700000000</string>
+    <string name="support_subject">FoodRush support</string>
+    <string-array name="faq_questions">
+        <item>How long does delivery take?</item>
+        <item>Is the payment real?</item>
+        <item>How is the delivery fee worked out?</item>
+        <item>Where does FoodRush deliver?</item>
+        <item>What is the delivery PIN?</item>
+        <item>Can I talk to my rider?</item>
+        <item>How do I use a coupon?</item>
+        <item>Can I cancel an order?</item>
+        <item>How do I become a rider or add my restaurant?</item>
+    </string-array>
+    <string-array name="faq_answers">
+        <item>The estimate is the kitchen\'s cooking time plus the quickest route on real roads, worked out with Dijkstra\'s algorithm on OpenStreetMap road data.</item>
+        <item>No. Cash, bKash, Nagad, Rocket and card are demos: no money moves and no details are saved.</item>
+        <item>30 tk plus 10 tk for every kilometre of road from the restaurant to you, at most 150 tk. VAT is 5% of the food.</item>
+        <item>Anywhere in Bangladesh where a restaurant on FoodRush delivers. Each restaurant sets its own delivery radius.</item>
+        <item>A 4-digit code on your tracking screen. Give it to the rider when the food arrives; they need it to finish the delivery.</item>
+        <item>Yes. Once a rider takes your order, use Chat or Call on the tracking screen. If an internet call can\'t connect, you can call their phone instead.</item>
+        <item>Enter the code in your cart and tap Apply, or tap an offer on the home screen or a restaurant page. Restaurant coupons only discount that restaurant\'s food.</item>
+        <item>Yes, until the restaurant starts cooking. Use Cancel order on the tracking screen.</item>
+        <item>Create a new account and choose Rider or Restaurant at sign-up. These accounts need FoodRush\'s cloud (Firebase) to be connected.</item>
+    </string-array>
+
+    <string name="permission_title">Permission needed</string>
+    <string name="permission_location">FoodRush uses your location to set the delivery address.</string>
+    <string name="permission_camera">FoodRush uses the camera so you can take a profile photo.</string>
+    <string name="permission_media">FoodRush needs access to your photos so you can choose a profile photo.</string>
+    <string name="permission_notifications">FoodRush sends notifications when your order status changes.</string>
+    <string name="permission_denied_settings">This permission is turned off. You can enable it in the app\'s settings.</string>
+    <string name="open_settings">Open settings</string>
+
+    <string name="channel_orders">Order updates</string>
+    <string name="channel_promos">Offers</string>
+    <string name="notification_tracking_title">Tracking your order</string>
+    <string name="notification_order_title">FoodRush order update</string>
+    <string name="action_track_order">Track order</string>
+    <string name="promo_notification_text">%1$s. Tap to order.</string>
+
+    <!-- Bangladesh, roles, live delivery, chat and calls -->
+    <string name="vat" formatted="false">VAT (5%)</string>
+    <string name="error_phone">Enter a Bangladeshi mobile number, like 01712345678</string>
+    <string name="phone_bd">Mobile number</string>
+    <string name="role_question">I am a</string>
+    <string name="role_customer">Customer</string>
+    <string name="role_rider">Rider</string>
+    <string name="role_restaurant">Restaurant</string>
+    <string name="role_customer_hint">Order food from restaurants near you.</string>
+    <string name="role_rider_hint">Deliver orders and earn from every trip.</string>
+    <string name="role_restaurant_hint">Take orders, cook, and manage your own menu and prices.</string>
+    <string name="role_needs_firebase">Rider and restaurant accounts need FoodRush\'s cloud (Firebase) connected. See the README.</string>
+    <string name="eta_working">Working out time…</string>
+    <string name="closed_now">Closed now</string>
+    <string name="restaurant_line">%1$s · %2$s</string>
+    <string name="no_delivery_here">No restaurant delivers to this address yet. These are the nearest ones.</string>
+    <string name="too_far">%1$s doesn\'t deliver to your address.</string>
+    <string name="restaurant_closed">%1$s is closed right now.</string>
+    <string name="below_min_order">%1$s needs at least %2$s of food.</string>
+    <string name="min_order_line">Minimum order %1$s</string>
+    <string name="share_restaurant_text">Try %1$s in %2$s on FoodRush!</string>
+    <string name="offers_section">Offers</string>
+    <string name="coupon_line">%1$s · %2$s</string>
+    <string name="sold_out">Sold out</string>
+    <string name="sold_out_category">%1$s · sold out</string>
+    <string name="review_reply">Restaurant: %1$s</string>
+    <string name="choose_size">Choose a size</string>
+    <string name="size_chip">%1$s · %2$s</string>
+    <string name="dish_meta">Ready in about %1$d min · %2$s</string>
+    <string-array name="spicy_levels">
+        <item>Mild</item>
+        <item>Medium spicy</item>
+        <item>Hot</item>
+        <item>Very hot</item>
+    </string-array>
+    <string name="coupon_other_restaurant">%1$s only works on food from %2$s.</string>
+    <string name="route_working">Working out the route on real roads…</string>
+    <string name="route_summary">Route: %1$s km (%2$s)</string>
+    <string name="route_source_dijkstra">real roads, Dijkstra</string>
+    <string name="route_source_osrm">real roads, OSRM</string>
+    <string name="route_source_estimate">estimated</string>
+    <string name="phone_needed_title">Add your phone number</string>
+    <string name="phone_needed_text">Your rider and the restaurant may need to call you about this order.</string>
+    <string name="order_failed">Couldn\'t place the order. Check your connection and try again.</string>
+    <string name="pin_line">Delivery PIN: %1$s · give it to your rider</string>
+
+    <string name="address_search_hint">Search an area, road or place</string>
+    <string name="address_not_found">No place in Bangladesh matches that.</string>
+    <string name="address_looking_up">Finding the address…</string>
+    <string name="outside_bangladesh">FoodRush delivers in Bangladesh only. Pick a spot in Bangladesh.</string>
+    <string name="outside_bangladesh_gps">You seem to be outside Bangladesh. Search or tap a spot on the map instead.</string>
+
+    <string name="pay_bkash">bKash</string>
+    <string name="pay_nagad">Nagad</string>
+    <string name="pay_rocket">Rocket</string>
+    <string name="wallet_number">Wallet number</string>
+    <string name="wallet_test_hint">Demo: no money moves. The code is 123456 and any 4 or 5 digit PIN works.</string>
+    <string name="otp_title">%1$s verification</string>
+    <string name="otp_text">Enter the code sent to %1$s. In this demo the code is always 123456.</string>
+    <string name="otp_hint">6-digit code</string>
+    <string name="otp_wrong">Wrong code. In this demo it is 123456.</string>
+    <string name="verify">Verify</string>
+    <string name="confirm">Confirm</string>
+    <string name="wallet_pin_title">%1$s PIN</string>
+    <string name="wallet_pin_hint">PIN</string>
+    <string name="wallet_pin_wrong">Enter a 4 or 5 digit PIN.</string>
+
+    <string name="stage_accepted">Accepted</string>
+    <string name="stage_cooking">Cooking</string>
+    <string name="stage_ready">Ready</string>
+    <string name="stage_arriving">Arriving</string>
+    <string name="stage_cancelled">Cancelled</string>
+    <string name="stage_accepted_long">The restaurant accepted your order</string>
+    <string name="stage_ready_long">Your food is ready and the rider is collecting it</string>
+    <string name="stage_ready_waiting_long">Your food is ready. Finding a rider…</string>
+    <string name="stage_picked_long">Your rider has your food and is on the way</string>
+    <string name="stage_arriving_long">Your rider is almost there</string>
+    <string name="stage_cancelled_long">This order was cancelled</string>
+    <string name="stage_cancelled_reason">Cancelled: %1$s</string>
+    <string name="your_rider">Your rider: %1$s</string>
+    <string name="chat_with_rider">Chat with your rider</string>
+    <string name="call_rider">Call your rider</string>
+    <string name="rider_distance">Rider is %1$.1f km away · about %2$d min</string>
+    <string name="rider_to_restaurant">Rider is %1$.1f km from the restaurant · about %2$d min to you</string>
+    <string name="arrives_in">Arrives in about %1$d min</string>
+    <string name="cancel_order">Cancel order</string>
+    <string name="cancel_order_title">Cancel this order?</string>
+    <string name="cancel_order_text">The kitchen hasn\'t started cooking yet, so you can still cancel. Nothing is charged.</string>
+    <string name="keep_order">Keep order</string>
+    <string name="cancelled_by_customer">cancelled by the customer</string>
+    <string name="cancel_too_late">Too late to cancel: the kitchen has started cooking.</string>
+    <string name="rate_delivery">Rate your delivery</string>
+    <string name="rate_rider">How was %1$s?</string>
+    <string name="tip_rider">Add a tip for your rider</string>
+    <string name="tip_none">No tip</string>
+    <string name="tip_20">20 tk</string>
+    <string name="tip_50">50 tk</string>
+    <string name="tip_100">100 tk</string>
+    <string name="rate_food">How was the food?</string>
+    <string name="thanks_rating">Thanks for rating!</string>
+    <string name="thanks_tip">Thanks! Your %1$d tk tip goes to the rider.</string>
+
+    <string name="chat">Chat</string>
+    <string name="chat_hint">Type a message</string>
+    <string name="send">Send</string>
+    <string name="chat_closed">This order has ended, so the chat is closed.</string>
+    <string name="chat_failed">Message not sent. Check your connection.</string>
+    <string name="chat_subtitle">Order #%1$s</string>
+    <string name="chat_title_waiting">Chat</string>
+    <string-array name="quick_replies_customer">
+        <item>I\'m at the gate</item>
+        <item>Please call me when you arrive</item>
+        <item>Please come to the main road</item>
+        <item>Thank you!</item>
+    </string-array>
+    <string-array name="quick_replies_rider">
+        <item>I\'ve picked up your food</item>
+        <item>I\'m on my way</item>
+        <item>I\'m outside</item>
+        <item>I can\'t find the address. Please call me.</item>
+    </string-array>
+
+    <string name="incoming_call_title">Incoming FoodRush call</string>
+    <string name="call_ringing">Ringing…</string>
+    <string name="call_connecting">Connecting…</string>
+    <string name="call_cant_connect">The internet call couldn\'t connect on this network.</string>
+    <string name="call_by_phone">Call by phone instead</string>
+    <string name="call_declined">Call declined</string>
+    <string name="call_no_answer">No answer</string>
+    <string name="call_missed">Missed call</string>
+    <string name="call_ended">Call ended</string>
+    <string name="answer">Answer</string>
+    <string name="hang_up">Hang up</string>
+    <string name="mute">Mute</string>
+    <string name="speaker">Speaker</string>
+    <string name="no_phone_number">There is no phone number for this person yet.</string>
+    <string name="permission_microphone">FoodRush needs the microphone for in-app calls.</string>
+
+    <string name="channel_chat">Chat messages</string>
+    <string name="channel_calls">Calls</string>
+    <string name="channel_work">Working in the background</string>
+    <string name="channel_jobs">New orders and delivery jobs</string>
+    <string name="photo_credits">Photo credits</string>
+
+    <!-- Restaurant accounts -->
+    <string name="claim_title_1">Set up your</string>
+    <string name="claim_title_2">restaurant</string>
+    <string name="claim_text">Restaurant accounts accept orders, cook, and change their menu, photos and prices in the app.</string>
+    <string name="claim_new">Add a new restaurant</string>
+    <string name="claim_existing">Or find your restaurant in the list</string>
+    <string name="claim_none">Every listed restaurant already has an owner. Add yours as a new one.</string>
+    <string name="claim_confirm_title">Run %1$s?</string>
+    <string name="claim_confirm_text">%1$s. Only the owner or staff of this restaurant should take it over.</string>
+    <string name="claim_confirm">Yes, it\'s mine</string>
+    <string name="claim_taken">Someone else has just taken that restaurant.</string>
+    <string name="open_for_orders">Open</string>
+    <string name="now_open">You\'re open for orders</string>
+    <string name="now_closed">Closed for orders</string>
+    <string name="kitchen_open_title">Open for orders</string>
+    <string name="kitchen_open_text">New orders will ring, even with the app in the background.</string>
+    <string name="kitchen_tab_new">New</string>
+    <string name="kitchen_tab_cooking">Cooking</string>
+    <string name="kitchen_tab_done">Done</string>
+    <string name="kitchen_stats">Today: %1$d orders · %2$s in sales</string>
+    <string name="kitchen_empty_new">No new orders. Stay open to receive them.</string>
+    <string name="kitchen_empty_cooking">Nothing cooking right now.</string>
+    <string name="kitchen_empty_done">Finished orders appear here.</string>
+    <string name="kitchen_new">New order</string>
+    <string name="kitchen_rejected">Rejected</string>
+    <string name="kitchen_new_order_title">New FoodRush order!</string>
+    <string name="kitchen_meta">Customer: %1$s · %2$s\n%3$s</string>
+    <string name="order_title">#%1$s · %2$s</string>
+    <string name="rider_named">Rider: %1$s</string>
+    <string name="rider_not_yet">No rider yet</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="start_cooking">Start cooking</string>
+    <string name="food_ready">Food ready</string>
+    <string name="waiting_pickup">Ready · waiting for the rider</string>
+    <string name="reject_title">Reject this order?</string>
+    <string name="reject_text">The customer will be told you can\'t take it, and nothing is charged.</string>
+    <string name="order_changed_elsewhere">That order changed on another phone. The list is up to date now.</string>
+    <string name="save_failed">Couldn\'t save. Check your connection and try again.</string>
+    <string name="permission_notifications_kitchen">FoodRush rings when a new order arrives.</string>
+
+    <string name="menu_editor_title">Menu</string>
+    <string name="menu_editor_hint">Tap a dish to change its photo, price, sizes or add-ons, or to mark it sold out.</string>
+    <string name="menu_editor_empty">No dishes yet. Add your first one.</string>
+    <string name="add_dish">Add a dish</string>
+    <string name="edit_dish">Edit dish</string>
+    <string name="dish_photo">Dish photo</string>
+    <string name="dish_name">Dish name</string>
+    <string name="dish_description">Description</string>
+    <string name="dish_category">Category</string>
+    <string name="price_tk">Price (tk)</string>
+    <string name="discount_price_tk">Discount price (tk)</string>
+    <string name="prep_minutes">Preparation time (minutes)</string>
+    <string name="spicy_level">Spicy level</string>
+    <string name="available_today">Available today</string>
+    <string name="sizes_title">Sizes</string>
+    <string name="sizes_hint">Each size has its own price, e.g. Half 220, Full 350. Leave empty for one size.</string>
+    <string name="add_size">Add a size</string>
+    <string name="addons_title">Add-ons</string>
+    <string name="add_addon">Add an add-on</string>
+    <string name="option_name">Name</string>
+    <string name="save_dish">Save dish</string>
+    <string name="dish_saved">Dish saved</string>
+    <string name="delete">Delete</string>
+    <string name="delete_dish">Delete this dish</string>
+    <string name="delete_dish_title">Delete %1$s?</string>
+    <string name="photo_failed">Couldn\'t read that photo. Try another one.</string>
+    <string name="error_dish_name">Enter the dish name</string>
+    <string name="error_category">Pick or type a category</string>
+    <string name="error_price">Enter an amount in taka</string>
+    <string name="error_discount">Must be lower than the price</string>
+
+    <string name="restaurant_profile_title">Restaurant profile</string>
+    <string name="cover_photo">Cover photo</string>
+    <string name="logo">Logo</string>
+    <string name="change_cover">Cover photo</string>
+    <string name="change_logo">Logo</string>
+    <string name="restaurant_name">Restaurant name</string>
+    <string name="restaurant_cuisine">Cuisine, e.g. Biryani, Bangla</string>
+    <string name="restaurant_description">About the restaurant</string>
+    <string name="restaurant_phone">Phone number</string>
+    <string name="restaurant_location">Location</string>
+    <string name="pick_on_map">Tap to set the location on the map</string>
+    <string name="restaurant_city">City</string>
+    <string name="restaurant_area">Area</string>
+    <string name="min_order_tk">Minimum order (tk)</string>
+    <string name="radius_km">Delivery radius (km)</string>
+    <string name="opening_hours">Opening hours</string>
+    <string name="opening_time">Opening time</string>
+    <string name="closing_time">Closing time</string>
+    <string name="closed_day">Closed</string>
+    <string name="error_city">Enter the city</string>
+    <string name="error_radius">1 to 25 km</string>
+    <string name="error_location">Set the restaurant\'s location on the map first.</string>
+    <string-array name="days_sunday_first">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string name="coupons_title">Coupons</string>
+    <string name="coupons_hint">Your coupons only discount your restaurant\'s part of an order.</string>
+    <string name="coupons_empty">No coupons yet.</string>
+    <string name="add_coupon">Add a coupon</string>
+    <string name="edit_coupon">Edit coupon</string>
+    <string name="coupon_code_hint">Code, e.g. KACCHI50</string>
+    <string name="coupon_percent">Percent off</string>
+    <string name="coupon_flat">Taka off</string>
+    <string name="coupon_value">Amount</string>
+    <string name="coupon_active">Customers can use it</string>
+    <string name="coupon_no_expiry">No end date (tap to set one)</string>
+    <string name="coupon_expires">Ends %1$s</string>
+    <string name="coupon_inactive">not active</string>
+    <string name="coupon_title_flat">%1$s off</string>
+    <string name="coupon_title_percent">%1$d%% off</string>
+    <string name="coupon_subtitle_min">On orders of %1$s or more</string>
+    <string name="coupon_subtitle_any">On any order</string>
+    <string name="coupon_save_failed">Couldn\'t save. Another restaurant may already use that code.</string>
+    <string name="error_coupon_code">4 to 16 letters or digits, not a FoodRush code</string>
+    <string name="error_percent">1 to 80</string>
+
+    <string name="reviews_title">Reviews</string>
+    <string name="reviews_hint">Tap a review to reply. Your reply shows under it for everyone.</string>
+    <string name="no_reviews_owner">No reviews yet.</string>
+    <string name="reply_to">Reply to %1$s</string>
+
+    <!-- Rider accounts -->
+    <string name="rider_hello">Hi, %1$s</string>
+    <string name="online">Online</string>
+    <string name="rider_status_online">Online · looking for jobs</string>
+    <string name="rider_status_offline">Offline</string>
+    <string name="rider_tab_current">Current</string>
+    <string name="rider_tab_available">Jobs nearby</string>
+    <string name="rider_tab_history">History</string>
+    <string name="rider_stats">Today %1$s from %2$d deliveries · This week %3$s · Rating %4$s</string>
+    <string name="rider_empty_current">No delivery in progress.</string>
+    <string name="rider_empty_available">No jobs nearby right now. You\'ll get a notification when one comes in.</string>
+    <string name="rider_empty_history">Your finished deliveries appear here.</string>
+    <string name="go_online_first">Go online to see delivery jobs near you.</string>
+    <string name="now_online">You\'re online. New jobs nearby will ring.</string>
+    <string name="finish_delivery_first">Finish your current delivery first.</string>
+    <string name="one_job_at_a_time">Finish your current delivery before taking another.</string>
+    <string name="job_taken">Another rider took this job first.</string>
+    <string name="accept_job">Accept job</string>
+    <string name="open_delivery">Open</string>
+    <string name="deliver_to">To: %1$s</string>
+    <string name="job_meta">%1$.1f km trip · %2$d items · %3$s</string>
+    <string name="pickup_minutes">About %1$d min to pickup</string>
+    <string name="recommended_job">★ Recommended · %1$s</string>
+    <string name="you_are_here">You</string>
+    <string name="rider_online_title">You\'re online</string>
+    <string name="rider_online_text">Sharing your location for deliveries.</string>
+    <string name="rider_new_delivery_title">New delivery job nearby</string>
+    <plurals name="rider_new_delivery_text">
+        <item quantity="one">%d new job near you. Tap to see it.</item>
+        <item quantity="other">%d new jobs near you. Tap to see them.</item>
+    </plurals>
+    <string name="permission_location_rider">FoodRush shares your location with your customer only while you\'re online, so they can follow their food.</string>
+    <string name="permission_notifications_rider">FoodRush alerts you to new delivery jobs nearby.</string>
+
+    <string name="delivery_title">Delivery</string>
+    <string name="pickups">Pick up from</string>
+    <string name="drop_off">Drop off</string>
+    <string name="go_to_pickup">Collect from %1$s</string>
+    <string name="go_to_customer">Deliver to %1$s</string>
+    <string name="distance_to_next">%1$.1f km to the next stop (straight line)</string>
+    <string name="waiting_for_gps">Waiting for GPS…</string>
+    <string name="picked_up">Picked up</string>
+    <string name="picked_up_done">Picked up ✓</string>
+    <string name="food_ready_pickup">Ready to collect</string>
+    <string name="not_ready_yet">The restaurant hasn\'t marked the food ready yet.</string>
+    <string name="customer_line">%1$s\n%2$s</string>
+    <string name="collect_cash_line">%1$s\n\nPayment: %2$s · Total %3$s</string>
+    <string name="navigate">Navigate</string>
+    <string name="deliver_with_pin">Hand over · enter PIN</string>
+    <string name="enter_pin_title">Delivery PIN</string>
+    <string name="enter_pin_text">Ask the customer for the 4-digit PIN shown in their app.</string>
+    <string name="deliver">Deliver</string>
+    <string name="pin_wrong">That PIN doesn\'t match. Ask the customer again.</string>
+    <string name="delivered_thanks">Delivered! You earned %1$s.</string>
+
+    <!-- v2.1: checkout, calls and sign-in -->
+    <string name="checkout_title_1">Getting your</string>
+    <string name="checkout_title_2">order ready</string>
+    <string name="checkout_working">Finding the best route for your rider</string>
+    <string name="checkout_step_restaurants">Checking the restaurants</string>
+    <string name="checkout_step_route">Finding the fastest road route</string>
+    <string name="checkout_step_bill">Working out the fee and delivery time</string>
+    <string name="checkout_summary_title">Checkout</string>
+    <string name="back_to_cart">Back to cart</string>
+    <string name="minus_amount">-%1$s</string>
+    <string name="place_order_total">Place order · %1$s</string>
+    <string name="proceed_to_checkout">Proceed to checkout</string>
+    <string name="about_amount">≈ %1$s</string>
+    <string name="fee_final_at_checkout">The exact delivery fee and time are worked out on the next step.</string>
+    <string name="call_reconnecting">Reconnecting…</string>
+    <string name="chat_missed_call">📞 Missed in-app call. Please call back.</string>
+    <string name="call_in_app">Free in-app call</string>
+    <string name="call_rider_phone">Call your rider\'s phone</string>
+    <string name="auth_error_network">No internet connection. Check your data or Wi-Fi and try again.</string>
+    <string name="auth_error_too_many">Too many tries. Please wait a few minutes and try again.</string>
+    <string name="auth_error_weak_password">This password is too weak. Use at least 6 characters.</string>
+    <string name="auth_error_email_taken">This email already has an account. Sign in instead.</string>
+    <string name="auth_error_disabled">This account has been turned off. Please contact support.</string>
+    <string name="auth_error_no_account">No account uses this email. Check it, or create a new account.</string>
+    <string name="auth_error_no_account_device">No account on this phone uses that email.</string>
+    <string name="auth_error_wrong_password">Wrong email or password. Try again, or tap Forgot password.</string>
+    <string name="auth_error_generic">Something went wrong. Please try again.</string>
+
+    <!-- v2.2: dashboards and real-life extras -->
+    <string name="rider_dashboard_title">Income dashboard</string>
+    <string name="sales_dashboard_title">Sales dashboard</string>
+    <string name="goal_title">Today\'s goal</string>
+    <string name="goal_set">Set goal</string>
+    <string name="goal_progress">%1$d of %2$d deliveries · %3$s of %4$s</string>
+    <string name="goal_done">Goal reached! %1$d deliveries · %2$s today 🎉</string>
+    <string name="goal_message">Set a daily target. The bar follows whichever one you are closer to.</string>
+    <string name="goal_deliveries_hint">Deliveries per day</string>
+    <string name="goal_taka_hint">Earnings per day (tk)</string>
+    <string name="dash_earnings">Earnings</string>
+    <string name="dash_last_7_days">Last 7 days</string>
+    <string name="dash_stats">Stats</string>
+    <string name="dash_deliveries">Deliveries and ratings</string>
+    <string name="dash_sales">Sales</string>
+    <string name="dash_top_dishes">Best sellers</string>
+    <string name="dash_no_sales">No sales yet.</string>
+    <string name="period_today">Today</string>
+    <string name="period_week">Last 7 days</string>
+    <string name="period_month">This month</string>
+    <string name="period_all">All time</string>
+    <string name="today">Today</string>
+    <string name="cash_in_hand">Cash in hand</string>
+    <string name="cash_never_deposited">Cash from cash-on-delivery orders you still hold</string>
+    <string name="cash_deposited_at">Last handed in %1$s</string>
+    <string name="mark_deposited">Mark as deposited</string>
+    <string name="deposit_confirm">Mark %1$s as handed in? The count starts again from zero.</string>
+    <string name="your_rating">Your rating</string>
+    <plurals name="ratings_count">
+        <item quantity="one">%d rating</item>
+        <item quantity="other">%d ratings</item>
+    </plurals>
+    <plurals name="riders_online">
+        <item quantity="one">%d rider online now</item>
+        <item quantity="other">%d riders online now</item>
+    </plurals>
+    <string name="stars_label">%1$d★</string>
+    <string name="stat_deliveries">Deliveries</string>
+    <string name="stat_distance">Distance ridden</string>
+    <string name="stat_avg_delivery">Average delivery time</string>
+    <string name="stat_tips">Tips received</string>
+    <string name="minutes_short">%1$d min</string>
+    <string name="tip_included">" · %1$s tip"</string>
+    <string name="delivery_when">%1$s · %2$.1f km%3$s</string>
+    <string name="not_rated_yet">Not rated yet</string>
+    <string name="no_comment">No comment</string>
+    <string name="stat_orders">Orders</string>
+    <string name="stat_avg_order">Average order</string>
+    <string name="stat_avg_cooking">Average cooking time</string>
+    <string name="stat_accepted_rejected">Accepted / rejected</string>
+    <string name="stat_cancelled">Cancelled by customers</string>
+    <string name="accepted_vs_rejected">%1$d / %2$d</string>
+    <string name="top_dish_line">%1$d. %2$s · %3$d sold</string>
+    <string name="busy_title">Busy mode</string>
+    <string name="busy_normal">Normal</string>
+    <string name="busy_15">Busy: +15 min cooking</string>
+    <string name="busy_30">Very busy: +30 min cooking</string>
+    <string name="busy_pause">Pause new orders</string>
+    <string name="busy_paused_label">Paused · not taking new orders</string>
+    <string name="busy_extra_label">Busy mode · +%1$d min cooking</string>
+    <string name="busy_customer_note">%1$s · busy, +%2$d min</string>
+    <string name="not_taking_orders">Not taking new orders right now</string>
+    <string name="kitchen_stats_tap">Today: %1$d orders · %2$s in sales  ›  Sales dashboard</string>
+    <string name="rider_stats_tap">Today %1$s from %2$d deliveries · This week %3$s · Rating %4$s  ›  Dashboard</string>
+    <string name="scheduled_kitchen">Scheduled for %1$s · start cooking at %2$s</string>
+    <string name="stage_scheduled_long">Scheduled: arriving around %1$s</string>
+    <string name="rider_comment_hint">Comment for your rider (optional)</string>
+    <string name="order_again">Order again</string>
+    <string name="reorder_none">None of these dishes can be ordered right now.</string>
+    <plurals name="reorder_skipped">
+        <item quantity="one">%d dish is sold out or gone and was skipped.</item>
+        <item quantity="other">%d dishes are sold out or gone and were skipped.</item>
+    </plurals>
+    <string name="live_order_text">Order #%1$s · about %2$d min · tap to track</string>
+</resources>
